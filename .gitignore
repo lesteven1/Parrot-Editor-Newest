@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+out/
+dist/
+coverage/
+tmp/
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+
+# Local historical/manual-import material; canonical fixtures live in examples/.
+Sb3 Project Examples/
+base-v0.3-phase-1.md

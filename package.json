@@ -1,0 +1,50 @@
+{
+  "name": "parrot-base-v0",
+  "version": "0.4.0",
+  "private": true,
+  "description": "A side-by-side bridge from Scratch blocks to Python and Pygame-CE.",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "examples:build": "node scripts/build-examples.mjs",
+    "converter:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-converter.mjs && node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-motion-parity.mjs",
+    "tabs:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/check-tabs.mjs",
+    "workspace:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/check-focused-workspace.mjs",
+    "explorer:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/check-explorer.mjs",
+    "python:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/check-python-executable.mjs",
+    "scratch-gui:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test scripts/check-scratch-gui.mjs",
+    "scratch-costumes:fetch": "node scripts/fetch-scratch-costumes.mjs",
+    "parity:check": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/check-motion-parity.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "pnpm run typecheck && electron-vite build",
+    "preview": "electron-vite preview"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@scratch/scratch-gui": "15.0.1",
+    "@scratch/scratch-render": "15.0.1",
+    "@scratch/scratch-storage": "15.0.1",
+    "@scratch/scratch-svg-renderer": "15.0.1",
+    "@scratch/scratch-vm": "15.0.1",
+    "events": "3.3.0",
+    "fflate": "0.8.2",
+    "monaco-editor": "^0.52.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "8.1.3",
+    "redux": "4.2.1",
+    "scratch-audio": "2.0.268",
+    "scratch-blocks": "2.1.19",
+    "scratch-render-fonts": "1.0.252"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
+    "electron": "^37.2.5",
+    "electron-vite": "^4.0.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.0.6"
+  },
+  "packageManager": "pnpm@11.16.0"
+}

@@ -1,0 +1,3 @@
+*.sb3 binary
+*.png binary
+resources/scratch-library/*.svg binary
